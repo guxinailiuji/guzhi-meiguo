@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>美国主要宽基指数介绍 | 代码、成本与ETF</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- 社交媒体图标 -->
+    <div class="social-icons">
+        <a href="https://space.bilibili.com/" target="_blank" class="social-icon bilibili" title="Bilibili">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" class="social-icon youtube" title="YouTube">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.douyin.com/" target="_blank" class="social-icon douyin" title="抖音">
+            <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="https://twitter.com/" target="_blank" class="social-icon twitter" title="Twitter">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.xiaohongshu.com/" target="_blank" class="social-icon xiaohongshu" title="小红书">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M15.9 8.91v-.48h-4.27v.37a7.16 7.16 0 0 0-1.8-.26 7.25 7.25 0 0 0-4.27 1.09V6.84h5.38V2.99h4.85v3.85h5.38v11.13a4.21 4.21 0 0 1-1.07 3.13 4.5 4.5 0 0 1-3.13 1.06h-7.23a4.5 4.5 0 0 1-3.13-1.06 4.21 4.21 0 0 1-1.07-3.13v-2.93c.6.91 1.94 1.83 4.32 1.83v-.69a6.24 6.24 0 0 1-3.34-1s.46 0 .67-.05a5.65 5.65 0 0 0 2.67.68 5.7 5.7 0 0 0 5.28-2.8c0 2.61-2.54 2.74-2.66 2.74a8.34 8.34 0 0 1-1.16-.11v.7s.31 0 .56.05h.68a3.88 3.88 0 0 0 2.46-.8 2.47 2.47 0 0 0 .63-1.89v-5.77a7.2 7.2 0 0 0-1.37.93Z"/></svg>
+        </a>
+        <a href="https://weibo.com/" target="_blank" class="social-icon weibo" title="微博">
+            <i class="fab fa-weibo"></i>
+        </a>
+    </div>
+
+    <header class="relative bg-blue-50 text-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold tracking-tight leading-tight font-geist-mono">美国主要宽基指数</h1>
+                <p class="mt-4 text-lg text-gray-600">深入了解美国市场的风向标：代码、成本与投资方式</p>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-gray-50 to-transparent"></div>
+    </header>
+
+    <nav class="sticky top-0 bg-white/80 backdrop-blur-md z-10 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <span class="font-semibold text-sm font-geist-mono">US INDICES</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="#sp500" class="text-sm font-medium hover:text-gray-900 transition-colors">S&P 500</a>
+                        <a href="#dow" class="text-sm font-medium hover:text-gray-900 transition-colors">道琼斯工业</a>
+                        <a href="#nasdaq" class="text-sm font-medium hover:text-gray-900 transition-colors">纳斯达克综合</a>
+                        <a href="#nasdaq100" class="text-sm font-medium hover:text-gray-900 transition-colors">纳斯达克100</a>
+                        <a href="#russell2000" class="text-sm font-medium hover:text-gray-900 transition-colors">罗素2000</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <section class="mb-12">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-2xl font-semibold mb-4">美国股票指数概览</h2>
+                <p class="text-gray-700 mb-4">美国股票指数是全球金融市场的晴雨表，不同指数反映了美国经济不同方面的表现。了解这些指数的历史、构成和特点，对投资者把握市场动向至关重要。</p>
+                <p class="text-gray-700">以下是对美国五大主要宽基指数的详细介绍，包括它们的股票代码、投资成本、优质ETF选择以及主要成分股构成。</p>
+            </div>
+        </section>
+
+        <div class="grid gap-10 md:gap-16">
+            <!-- S&P 500 -->
+            <section id="sp500" class="scroll-mt-20 bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
+                <div class="grid md:grid-cols-5 gap-6">
+                    <div class="md:col-span-2 flex items-center justify-center p-6 bg-gradient-to-br from-[#C00000]/5 to-[#C00000]/20">
+                        <div class="w-48 h-48 flex items-center justify-center flex-col">
+                            <span class="text-[#C00000] text-5xl font-bold mb-2">SPX</span>
+                            <span class="text-[#C00000] text-2xl font-medium">标普500</span>
+                            <span class="text-[#C00000] text-sm mt-2">指数代码: ^GSPC / SPX</span>
+                        </div>
+                    </div>
+                    <div class="md:col-span-3 p-6 md:p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="text-3xl font-bold font-geist-mono">标普500指数</h2>
+                            <span class="text-xs font-medium bg-[#0C2340]/10 text-[#0C2340] px-3 py-1 rounded-full">大盘股</span>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold mb-2">简介</h3>
+                            <p class="text-gray-700">标普500指数被广泛视为衡量美国大盘股市场表现的最佳单一指标。它包含500家在美国上市的顶尖大型公司，覆盖美国股市总市值的约80%。该指数采用市值加权方式计算，市值越大的公司权重越高，被认为是美国经济和股市的晴雨表。</p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold mb-2">历史关键节点</h3>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                                <li><span class="font-medium">1957年：</span>开始记录美国股市表现</li>
+                                <li><span class="font-medium">每季度：</span>由委员会进行成分股调整（3、6、9、12月）</li>
+                                <li><span class="font-medium">2024年10月：</span>指数总市值超过50万亿美元</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">主要成分股及行业分布</h3>
+                            <p class="text-gray-700 mb-3">行业分布广泛，相比道指更多元化。</p>
+                            
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <h4 class="font-medium mb-2 text-sm text-gray-600">主要行业分布</h4>
+                                <div class="space-y-2">
+                                    <div class="flex items-center">
+                                        <div class="w-32 text-sm">信息技术</div>
+                                        <div class="flex-1 bg-gray-200 rounded-full h-3">
+                                            <div class="bg-[#0C2340] h-3 rounded-full" style="width: 30.7%"></div>
+                                        </div>
+                                        <div class="ml-2 text-sm font-medium">30.7%</div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="w-32 text-sm">金融</div>
+                                        <div class="flex-1 bg-gray-200 rounded-full h-3">
+                                            <div class="bg-[#0C2340] h-3 rounded-full opacity-80" style="width: 14.5%"></div>
+                                        </div>
+                                        <div class="ml-2 text-sm font-medium">14.5%</div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="w-32 text-sm">健康护理</div>
+                                        <div class="flex-1 bg-gray-200 rounded-full h-3">
+                                            <div class="bg-[#0C2340] h-3 rounded-full opacity-60" style="width: 10.8%"></div>
+                                        </div>
+                                        <div class="ml-2 text-sm font-medium">10.8%</div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="w-32 text-sm">非必需消费品</div>
+                                        <div class="flex-1 bg-gray-200 rounded-full h-3">
+                                            <div class="bg-[#0C2340] h-3 rounded-full opacity-50" style="width: 10.5%"></div>
+                                        </div>
+                                        <div class="ml-2 text-sm font-medium">10.5%</div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="w-32 text-sm">通讯服务</div>
+                                        <div class="flex-1 bg-gray-200 rounded-full h-3">
+                                            <div class="bg-[#0C2340] h-3 rounded-full opacity-40" style="width: 9.5%"></div>
+                                        </div>
+                                        <div class="ml-2 text-sm font-medium">9.5%</div>
+                                    </div>
+                                </div>
+                                
+                                <h4 class="font-medium mt-4 mb-2 text-sm text-gray-600">主要成分股</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-[#0C2340]/10 text-[#0C2340] px-3 py-1 rounded-full text-sm">苹果 (AAPL)</span>
+                                    <span class="bg-[#0C2340]/10 text-[#0C2340] px-3 py-1 rounded-full text-sm">微软 (MSFT)</span>
+                                    <span class="bg-[#0C2340]/10 text-[#0C2340] px-3 py-1 rounded-full text-sm">英伟达 (NVDA)</span>
+                                    <span class="bg-[#0C2340]/10 text-[#0C2340] px-3 py-1 rounded-full text-sm">亚马逊 (AMZN)</span>
+                                    <span class="bg-[#0C2340]/10 text-[#0C2340] px-3 py-1 rounded-full text-sm">Meta Platforms (META)</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <h3 class="text-lg font-semibold mb-2">投资指南</h3>
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <h4 class="font-medium mb-2 text-sm text-gray-600">优质ETF选择</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-[#C00000]/10 text-[#C00000] px-3 py-1 rounded-full text-sm">VOO (Vanguard) - 费率0.03%</span>
+                                    <span class="bg-[#C00000]/10 text-[#C00000] px-3 py-1 rounded-full text-sm">SPY (SPDR) - 费率0.09%</span>
+                                    <span class="bg-[#C00000]/10 text-[#C00000] px-3 py-1 rounded-full text-sm">IVV (iShares) - 费率0.03%</span>
+                                </div>
+                                <p class="mt-3 text-sm text-gray-600">标普500指数基金是市场上费率最低的ETF之一，长期持有是建立核心仓位的理想选择。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dow Jones -->
+            <section id="dow" class="scroll-mt-20 bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
+                <div class="grid md:grid-cols-5 gap-6">
+                    <div class="md:col-span-2 flex items-center justify-center p-6 bg-gradient-to-br from-[#6BBBEA]/5 to-[#6BBBEA]/20">
+                        <div class="w-48 h-48 flex items-center justify-center flex-col">
+                            <span class="text-[#6BBBEA] text-5xl font-bold mb-2">DJIA</span>
+                            <span class="text-[#6BBBEA] text-2xl font-medium">道琼斯工业</span>
+                            <span class="text-[#6BBBEA] text-sm mt-2">指数代码: ^DJI / DJI</span>
+                        </div>
+                    </div>
+                    <div class="md:col-span-3 p-6 md:p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="text-3xl font-bold font-geist-mono">道琼斯工业平均指数</h2>
+                            <span class="text-xs font-medium bg-[#0A2240]/10 text-[#0A2240] px-3 py-1 rounded-full">蓝筹股</span>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold mb-2">简介</h3>
+                            <p class="text-gray-700">道琼斯工业平均指数（简称"道指"）是美国历史最悠久、最受关注的股票市场指数之一。它包含30家在美国上市的大型、著名蓝筹股公司，不含运输和公用事业公司。道指采用价格加权方式计算，即股价越高的公司对指数影响越大，而非按公司总市值。</p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold mb-2">历史关键节点</h3>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                                <li><span class="font-medium">1896年：</span>由查尔斯·道创立，最初包含12只股票</li>
+                                <li><span class="font-medium">1916年：</span>成分股增至20只</li>
+                                <li><span class="font-medium">1928年：</span>成分股固定为30只</li>
+                                <li><span class="font-medium">重要点位突破：</span>1,000 (1972), 5,000 (1995), 10,000 (1999), 20,000 (2017), 30,000 (2020), 40,000 (2024)</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">成分股</h3>
+                            <p class="text-gray-700 mb-3">成分股由标普道琼斯指数委员会挑选和维护，会随经济发展而调整。</p>
+                            
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <h4 class="font-medium mb-2 text-sm text-gray-600">代表性公司</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-[#0A2240]/10 text-[#0A2240] px-3 py-1 rounded-full text-sm">微软 (MSFT)</span>
+                                    <span class="bg-[#0A2240]/10 text-[#0A2240] px-3 py-1 rounded-full text-sm">苹果 (AAPL)</span>
+                                    <span class="bg-[#0A2240]/10 text-[#0A2240] px-3 py-1 rounded-full text-sm">亚马逊 (AMZN)</span>
+                                    <span class="bg-[#0A2240]/10 text-[#0A2240] px-3 py-1 rounded-full text-sm">联合健康 (UNH)</span>
+                                    <span class="bg-[#0A2240]/10 text-[#0A2240] px-3 py-1 rounded-full text-sm">高盛 (GS)</span>
+                                    <span class="bg-[#0A2240]/10 text-[#0A2240] px-3 py-1 rounded-full text-sm">家得宝 (HD)</span>
+                                    <span class="bg-[#0A2240]/10 text-[#0A2240] px-3 py-1 rounded-full text-sm">麦当劳 (MCD)</span>
+                                    <span class="bg-[#0A2240]/10 text-[#0A2240] px-3 py-1 rounded-full text-sm">波音 (BA)</span>
+                                    <span class="bg-[#0A2240]/10 text-[#0A2240] px-3 py-1 rounded-full text-sm">Visa (V)</span>
+                                    <span class="bg-[#0A2240]/10 text-[#0A2240] px-3 py-1 rounded-full text-sm">强生 (JNJ)</span>
+                                </div>
+                                <p class="mt-3 text-sm text-gray-500 italic">注：成分股会随时间变化，例如英伟达 (NVDA) 和亚马逊 (AMZN) 是近年加入的。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <h3 class="text-lg font-semibold mb-2">投资指南</h3>
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <h4 class="font-medium mb-2 text-sm text-gray-600">优质ETF选择</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-[#6BBBEA]/10 text-[#6BBBEA] px-3 py-1 rounded-full text-sm">DIA (SPDR) - 费率0.16%</span>
+                                    <span class="bg-[#6BBBEA]/10 text-[#6BBBEA] px-3 py-1 rounded-full text-sm">DJIA (Global X) - 费率0.51%</span>
+                                    <span class="bg-[#6BBBEA]/10 text-[#6BBBEA] px-3 py-1 rounded-full text-sm">UDOW (ProShares) - 杠杆型</span>
+                                </div>
+                                <p class="mt-3 text-sm text-gray-600">道指ETF费率相对标普500略高，但仍然是蓝筹股配置的良好选择。DIA是最受欢迎的道指ETF。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NASDAQ Composite -->
+            <section id="nasdaq" class="scroll-mt-20 bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
+                <div class="grid md:grid-cols-5 gap-6">
+                    <div class="md:col-span-2 flex items-center justify-center p-6 bg-gradient-to-br from-[#0A2240]/5 to-[#0A2240]/20">
+                        <div class="w-48 h-48 flex items-center justify-center flex-col">
+                            <span class="text-[#0A2240] text-5xl font-bold mb-2">COMP</span>
+                            <span class="text-[#0A2240] text-2xl font-medium">纳斯达克综合</span>
+                            <span class="text-[#0A2240] text-sm mt-2">指数代码: ^IXIC / COMPX</span>
+                        </div>
+                    </div>
+                    <div class="md:col-span-3 p-6 md:p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="text-3xl font-bold font-geist-mono">纳斯达克综合指数</h2>
+                            <span class="text-xs font-medium bg-[#0085CA]/10 text-[#0085CA] px-3 py-1 rounded-full">科技为主</span>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold mb-2">简介</h3>
+                            <p class="text-gray-700">纳斯达克综合指数（简称"纳指"）追踪在纳斯达克证券交易所上市的所有股票的价格表现，包括超过3000家美国本土及外国公司。纳指以科技股为主导，包含大量信息技术、生物技术、互联网等高科技和成长型公司，被视为反映市场对高科技行业信心和预期的重要指标。该指数采用市值加权方式计算。</p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold mb-2">历史关键节点</h3>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                                <li><span class="font-medium">1971年2月5日：</span>创立，基准点为100点</li>
+                                <li><span class="font-medium">1995年7月：</span>首次突破1,000点</li>
+                                <li><span class="font-medium">2000年3月10日：</span>互联网泡沫顶峰，创下5048.62点的历史高点</li>
+                                <li><span class="font-medium">2002年10月：</span>泡沫破裂后跌至约1108点</li>
+                                <li><span class="font-medium">2020年6月9日：</span>首次突破10,000点</li>
+                                <li><span class="font-medium">2024年12月11日：</span>首次站上20,000点</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">构成与特点</h3>
+                            <p class="text-gray-700 mb-3">成分股数量超过3000只，高科技公司占比较高。</p>
+                            
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <h4 class="font-medium mb-2 text-sm text-gray-600">主要成分股</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-[#0085CA]/10 text-[#0085CA] px-3 py-1 rounded-full text-sm">苹果 (AAPL)</span>
+                                    <span class="bg-[#0085CA]/10 text-[#0085CA] px-3 py-1 rounded-full text-sm">微软 (MSFT)</span>
+                                    <span class="bg-[#0085CA]/10 text-[#0085CA] px-3 py-1 rounded-full text-sm">亚马逊 (AMZN)</span>
+                                    <span class="bg-[#0085CA]/10 text-[#0085CA] px-3 py-1 rounded-full text-sm">NVIDIA (NVDA)</span>
+                                    <span class="bg-[#0085CA]/10 text-[#0085CA] px-3 py-1 rounded-full text-sm">Alphabet (GOOGL/GOOG)</span>
+                                    <span class="bg-[#0085CA]/10 text-[#0085CA] px-3 py-1 rounded-full text-sm">Meta (META)</span>
+                                    <span class="bg-[#0085CA]/10 text-[#0085CA] px-3 py-1 rounded-full text-sm">特斯拉 (TSLA)</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <h3 class="text-lg font-semibold mb-2">投资指南</h3>
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <h4 class="font-medium mb-2 text-sm text-gray-600">优质ETF选择</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-[#0A2240]/10 text-[#0A2240] px-3 py-1 rounded-full text-sm">ONEQ (Fidelity) - 费率0.21%</span>
+                                    <span class="bg-[#0A2240]/10 text-[#0A2240] px-3 py-1 rounded-full text-sm">NDAQ (none) - 无直接ETF</span>
+                                </div>
+                                <p class="mt-3 text-sm text-gray-600">纳斯达克综合指数缺乏多样的ETF选项，ONEQ是少数直接跟踪该指数的ETF。投资者更常选择纳斯达克100指数ETF。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NASDAQ-100 -->
+            <section id="nasdaq100" class="scroll-mt-20 bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
+                <div class="grid md:grid-cols-5 gap-6">
+                    <div class="md:col-span-2 flex items-center justify-center p-6 bg-gradient-to-br from-[#0A2240]/5 to-[#0A2240]/20">
+                        <div class="w-48 h-48 flex items-center justify-center flex-col">
+                            <span class="text-[#0A2240] text-5xl font-bold mb-2">NDX</span>
+                            <span class="text-[#0A2240] text-2xl font-medium">纳斯达克100</span>
+                            <span class="text-[#0A2240] text-sm mt-2">指数代码: ^NDX / NDX</span>
+                        </div>
+                    </div>
+                    <div class="md:col-span-3 p-6 md:p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="text-3xl font-bold font-geist-mono">纳斯达克100指数</h2>
+                            <span class="text-xs font-medium bg-[#00A1E0]/10 text-[#00A1E0] px-3 py-1 rounded-full">科技龙头</span>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold mb-2">简介</h3>
+                            <p class="text-gray-700">纳斯达克100指数包含在纳斯达克上市的市值最大的100家非金融类公司。相比纳斯达克综合指数，科技股含量更高，更能代表大型科技股的表现。该指数同样采用市值加权方式计算。</p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold mb-2">历史关键节点</h3>
+                            <p class="text-gray-700">纳斯达克100指数通常与纳斯达克综合指数共享重要市场周期，但具体指数点位里程碑不同。作为科技股的集中体现，该指数在科技股牛市中表现尤为突出。</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">构成与特点</h3>
+                            <p class="text-gray-700 mb-3">成分股数量为100家大型非金融公司，剔除了金融类公司，更纯粹地反映科技和成长型龙头企业的表现。</p>
+                            
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <h4 class="font-medium mb-2 text-sm text-gray-600">主要成分股</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-[#00A1E0]/10 text-[#00A1E0] px-3 py-1 rounded-full text-sm">苹果 (AAPL)</span>
+                                    <span class="bg-[#00A1E0]/10 text-[#00A1E0] px-3 py-1 rounded-full text-sm">微软 (MSFT)</span>
+                                    <span class="bg-[#00A1E0]/10 text-[#00A1E0] px-3 py-1 rounded-full text-sm">亚马逊 (AMZN)</span>
+                                    <span class="bg-[#00A1E0]/10 text-[#00A1E0] px-3 py-1 rounded-full text-sm">NVIDIA (NVDA)</span>
+                                    <span class="bg-[#00A1E0]/10 text-[#00A1E0] px-3 py-1 rounded-full text-sm">Alphabet (GOOGL/GOOG)</span>
+                                    <span class="bg-[#00A1E0]/10 text-[#00A1E0] px-3 py-1 rounded-full text-sm">Meta (META)</span>
+                                    <span class="bg-[#00A1E0]/10 text-[#00A1E0] px-3 py-1 rounded-full text-sm">特斯拉 (TSLA)</span>
+                                    <span class="bg-[#00A1E0]/10 text-[#00A1E0] px-3 py-1 rounded-full text-sm">Broadcom (AVGO)</span>
+                                    <span class="bg-[#00A1E0]/10 text-[#00A1E0] px-3 py-1 rounded-full text-sm">Adobe (ADBE)</span>
+                                    <span class="bg-[#00A1E0]/10 text-[#00A1E0] px-3 py-1 rounded-full text-sm">Costco (COST)</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <h3 class="text-lg font-semibold mb-2">投资指南</h3>
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <h4 class="font-medium mb-2 text-sm text-gray-600">优质ETF选择</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-[#00A1E0]/10 text-[#00A1E0] px-3 py-1 rounded-full text-sm">QQQ (Invesco) - 费率0.20%</span>
+                                    <span class="bg-[#00A1E0]/10 text-[#00A1E0] px-3 py-1 rounded-full text-sm">QQQM (Invesco) - 费率0.15%</span>
+                                    <span class="bg-[#00A1E0]/10 text-[#00A1E0] px-3 py-1 rounded-full text-sm">TQQQ (ProShares) - 杠杆型</span>
+                                </div>
+                                <p class="mt-3 text-sm text-gray-600">QQQ是流动性最高、交易量最大的纳斯达克100 ETF。QQQM费率较低，更适合长期持有。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Russell 2000 -->
+            <section id="russell2000" class="scroll-mt-20 bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
+                <div class="grid md:grid-cols-5 gap-6">
+                    <div class="md:col-span-2 flex items-center justify-center p-6 bg-gradient-to-br from-[#0A2240]/5 to-[#0A2240]/20">
+                        <div class="w-48 h-48 flex items-center justify-center flex-col">
+                            <span class="text-[#0A2240] text-5xl font-bold mb-2">RTY</span>
+                            <span class="text-[#0A2240] text-2xl font-medium">罗素2000</span>
+                            <span class="text-[#0A2240] text-sm mt-2">指数代码: ^RUT / RUT</span>
+                        </div>
+                    </div>
+                    <div class="md:col-span-3 p-6 md:p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="text-3xl font-bold font-geist-mono">罗素2000指数</h2>
+                            <span class="text-xs font-medium bg-[#074B85]/10 text-[#074B85] px-3 py-1 rounded-full">小型股</span>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold mb-2">简介</h3>
+                            <p class="text-gray-700">罗素2000指数是衡量美国小型股市场表现的重要基准。它由罗素3000指数中市值排名第1001至第3000位的2000家公司组成。这些企业代表美国经济中充满活力的小型企业部分，被认为是就业增长的重要引擎。该指数采用市值加权方式计算。</p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold mb-2">历史关键节点</h3>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                                <li><span class="font-medium">1984年：</span>由Frank Russell公司推出</li>
+                                <li><span class="font-medium">历史最高收盘点：</span>2,442.74 (2021年11月8日)</li>
+                                <li><span class="font-medium">历史盘中最高点：</span>2,466.49 (2024年11月25日)</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">构成与特点</h3>
+                            <p class="text-gray-700 mb-3">指数涵盖美国小型公司，这些公司通常具有高增长潜力，但也伴随较高风险。行业分布较为多元，对整体经济具有较强的代表性。</p>
+                            
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <h4 class="font-medium mb-2 text-sm text-gray-600">主要成分股</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-[#074B85]/10 text-[#074B85] px-3 py-1 rounded-full text-sm">Super Micro Computer (SMCI)</span>
+                                    <span class="bg-[#074B85]/10 text-[#074B85] px-3 py-1 rounded-full text-sm">Vertiv Holdings (VRT)</span>
+                                    <span class="bg-[#074B85]/10 text-[#074B85] px-3 py-1 rounded-full text-sm">Comfort Systems USA (FIX)</span>
+                                    <span class="bg-[#074B85]/10 text-[#074B85] px-3 py-1 rounded-full text-sm">Abercrombie & Fitch (ANF)</span>
+                                    <span class="bg-[#074B85]/10 text-[#074B85] px-3 py-1 rounded-full text-sm">Apellis Pharmaceuticals (APLS)</span>
+                                    <span class="bg-[#074B85]/10 text-[#074B85] px-3 py-1 rounded-full text-sm">Applied Industrial Tech (AIT)</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <h3 class="text-lg font-semibold mb-2">投资指南</h3>
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <h4 class="font-medium mb-2 text-sm text-gray-600">优质ETF选择</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-[#074B85]/10 text-[#074B85] px-3 py-1 rounded-full text-sm">IWM (iShares) - 费率0.19%</span>
+                                    <span class="bg-[#074B85]/10 text-[#074B85] px-3 py-1 rounded-full text-sm">VTWO (Vanguard) - 费率0.10%</span>
+                                    <span class="bg-[#074B85]/10 text-[#074B85] px-3 py-1 rounded-full text-sm">URTY (ProShares) - 杠杆型</span>
+                                </div>
+                                <p class="mt-3 text-sm text-gray-600">IWM是交易量最大的小型股ETF，适合活跃交易。VTWO费率较低，更适合长期持有。小型股波动性较大，长期可能带来更高回报。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="mt-16 max-w-3xl mx-auto">
+            <h2 class="text-2xl font-semibold mb-4">指数对比</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full border-collapse">
+                    <thead>
+                        <tr class="bg-gray-50">
+                            <th class="px-4 py-3 text-left text-sm font-medium text-gray-600 border-b">指数名称</th>
+                            <th class="px-4 py-3 text-left text-sm font-medium text-gray-600 border-b">指数代码</th>
+                            <th class="px-4 py-3 text-left text-sm font-medium text-gray-600 border-b">热门ETF</th>
+                            <th class="px-4 py-3 text-left text-sm font-medium text-gray-600 border-b">最低ETF费率</th>
+                            <th class="px-4 py-3 text-left text-sm font-medium text-gray-600 border-b">特点</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="px-4 py-3 text-sm font-medium">标普500指数</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">^GSPC / SPX</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">VOO, SPY, IVV</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">0.03%</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">大盘股，最低成本ETF</td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="px-4 py-3 text-sm font-medium">道琼斯工业平均指数</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">^DJI / DJI</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">DIA</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">0.16%</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">蓝筹股，历史最悠久</td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="px-4 py-3 text-sm font-medium">纳斯达克综合指数</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">^IXIC / COMPX</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">ONEQ</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">0.21%</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">ETF选择有限</td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="px-4 py-3 text-sm font-medium">纳斯达克100指数</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">^NDX / NDX</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">QQQ, QQQM</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">0.15%</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">科技龙头集中，高流动性</td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="px-4 py-3 text-sm font-medium">罗素2000指数</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">^RUT / RUT</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">IWM, VTWO</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">0.10%</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">小型股，长期高增长潜力</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="mt-16 max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h2 class="text-2xl font-semibold mb-4">指数ETF投资成本比较</h2>
+            <p class="text-gray-700 mb-6">长期投资者应重视ETF费率，因为即使微小的费率差异也会随时间推移产生显著影响。以下是主要指数ETF的费率比较：</p>
+            
+            <div class="space-y-4">
+                <div class="flex items-center">
+                    <div class="w-48 text-sm font-medium">标普500指数 (VOO)</div>
+                    <div class="flex-1 bg-gray-200 rounded-full h-3 relative">
+                        <div class="bg-green-500 h-3 rounded-full absolute" style="width: 3%"></div>
+                    </div>
+                    <div class="ml-2 text-sm font-medium">0.03%</div>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-48 text-sm font-medium">标普500指数 (SPY)</div>
+                    <div class="flex-1 bg-gray-200 rounded-full h-3 relative">
+                        <div class="bg-green-500 h-3 rounded-full absolute" style="width: 9%"></div>
+                    </div>
+                    <div class="ml-2 text-sm font-medium">0.09%</div>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-48 text-sm font-medium">罗素2000 (VTWO)</div>
+                    <div class="flex-1 bg-gray-200 rounded-full h-3 relative">
+                        <div class="bg-blue-500 h-3 rounded-full absolute" style="width: 10%"></div>
+                    </div>
+                    <div class="ml-2 text-sm font-medium">0.10%</div>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-48 text-sm font-medium">纳斯达克100 (QQQM)</div>
+                    <div class="flex-1 bg-gray-200 rounded-full h-3 relative">
+                        <div class="bg-blue-500 h-3 rounded-full absolute" style="width: 15%"></div>
+                    </div>
+                    <div class="ml-2 text-sm font-medium">0.15%</div>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-48 text-sm font-medium">道琼斯工业 (DIA)</div>
+                    <div class="flex-1 bg-gray-200 rounded-full h-3 relative">
+                        <div class="bg-blue-500 h-3 rounded-full absolute" style="width: 16%"></div>
+                    </div>
+                    <div class="ml-2 text-sm font-medium">0.16%</div>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-48 text-sm font-medium">罗素2000 (IWM)</div>
+                    <div class="flex-1 bg-gray-200 rounded-full h-3 relative">
+                        <div class="bg-yellow-500 h-3 rounded-full absolute" style="width: 19%"></div>
+                    </div>
+                    <div class="ml-2 text-sm font-medium">0.19%</div>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-48 text-sm font-medium">纳斯达克100 (QQQ)</div>
+                    <div class="flex-1 bg-gray-200 rounded-full h-3 relative">
+                        <div class="bg-yellow-500 h-3 rounded-full absolute" style="width: 20%"></div>
+                    </div>
+                    <div class="ml-2 text-sm font-medium">0.20%</div>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-48 text-sm font-medium">纳斯达克综合 (ONEQ)</div>
+                    <div class="flex-1 bg-gray-200 rounded-full h-3 relative">
+                        <div class="bg-yellow-500 h-3 rounded-full absolute" style="width: 21%"></div>
+                    </div>
+                    <div class="ml-2 text-sm font-medium">0.21%</div>
+                </div>
+            </div>
+            
+            <p class="mt-6 text-sm text-gray-600">
+                <strong>说明：</strong> 费率越低（绿色），长期持有的成本效益越高。标普500指数ETF(VOO/IVV)提供最低的管理费率，是被动投资者的理想选择。
+            </p>
+        </section>
+    </main>
+
+    <footer class="bg-gray-100 mt-16 py-10 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-gray-600 text-sm">
+                <p>数据仅供参考，ETF费率可能随时间变化，请在投资前查询最新信息。</p>
+                <p class="mt-2">指数代码可能因券商或数据提供商而略有不同。</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

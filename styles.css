@@ -1,0 +1,156 @@
+/* Update the color scheme to be lighter */
+:root {
+  --font-geist-mono: "Geist Mono", monospace;
+  --primary-color: #3b82f6;  /* Blue-500 */
+  --primary-light: #eff6ff;  /* Blue-50 */
+  --text-primary: #1f2937;   /* Gray-800 */
+  --text-secondary: #4b5563; /* Gray-600 */
+  --bg-light: #f9fafb;       /* Gray-50 */
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  color: var(--text-primary);
+  background-color: var(--bg-light);
+}
+
+.font-geist-mono {
+  font-family: var(--font-geist-mono);
+}
+
+/* Custom shadow effect for cards */
+.shadow-sm {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent mobile touch highlight */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Remove outline on focus */
+:focus {
+  outline: none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d1d1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b1b1b1;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+}
+
+/* 闪烁效果动画 */
+@keyframes blink-effect {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.blink {
+  animation: blink-effect 1.5s infinite;
+  position: relative;
+  z-index: 1;
+}
+
+/* 自定义闪烁颜色变化 */
+@keyframes color-blink {
+  0% { color: inherit; background-color: transparent; }
+  25% { color: #ff6b6b; background-color: rgba(255, 107, 107, 0.1); }
+  50% { color: #ff3030; text-shadow: 0 0 5px rgba(255, 48, 48, 0.5); transform: scale(1.05); background-color: rgba(255, 48, 48, 0.15); }
+  75% { color: #ff6b6b; background-color: rgba(255, 107, 107, 0.1); }
+  100% { color: inherit; background-color: transparent; }
+}
+
+.color-blink {
+  animation: color-blink 2s infinite;
+  display: inline-block;
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+/* 社交媒体图标样式 */
+.social-icons {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 50;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f3f4f6;
+  color: #4b5563;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon.bilibili:hover {
+  background-color: #00a1d6;
+  color: white;
+}
+
+.social-icon.youtube:hover {
+  background-color: #ff0000;
+  color: white;
+}
+
+.social-icon.douyin:hover {
+  background-color: #000000;
+  color: white;
+}
+
+.social-icon.twitter:hover {
+  background-color: #1DA1F2;
+  color: white;
+}
+
+.social-icon.xiaohongshu:hover {
+  background-color: #fe2c55;
+  color: white;
+}
+
+.social-icon.weibo:hover {
+  background-color: #e6162d;
+  color: white;
+}
